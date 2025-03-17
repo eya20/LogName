@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package person;
+
+option go_package = "LogName/personpb";
+
+service PersonService {
+  rpc SendPerson (PersonRequest) returns (PersonResponse);
+}
+
+message PersonRequest {
+  string name = 1;
+  string surname = 2;
+}
+
+message PersonResponse {
+  string message = 1;
+}
